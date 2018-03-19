@@ -1,0 +1,242 @@
+/* Updated version - 24th Nov 2014 */
+$backgroundColor: #f76462;
+$list: #6dc5dd;
+$border: #5ab2ca;
+$geneicons: #fff;
+
+@mixin background-image($imgColor1, $imgColor2) {
+
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzU0OGFiZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzI5NWI5ZSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, $imgColor1), color-stop(100%, $imgColor2));
+  background-image: -moz-linear-gradient($imgColor1, $imgColor2);
+  background-image: -webkit-linear-gradient($imgColor1, $imgColor2);
+  background-image: linear-gradient($imgColor1, $imgColor2);
+}
+
+@mixin transition ($allTime, $easeInOutTime) {
+  -moz-transition: all $allTime+s ease-in-out $easeInOutTime+s;
+  -o-transition: all $allTime+s ease-in-out $easeInOutTime+s;
+  -webkit-transition: all $allTime+s ease-in-out;
+  -webkit-transition-delay: $easeInOutTime+s;
+  transition: all $allTime+s ease-in-out $easeInOutTime+s;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+
+q {
+  &:before, &:after {
+    content: "";
+    content: none;
+  }
+}
+
+blockquote {
+  &:before, &:after {
+    content: "";
+    content: none;
+  }
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* Variables */
+
+body {
+  background: $backgroundColor;
+  font-family: Lato, sans-serif;
+}
+
+@font-face {
+  font-family: 'Genericons';
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/53819/genericons-regular-webfont.eot");
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/53819/genericons-regular-webfont.woff") format("woff"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/53819/genericons-regular-webfont.eot") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.container {
+  margin: 100px auto;
+}
+
+.accordion {
+  background: $border;
+  width: 100%;
+  min-width: 950px;
+  display: block;
+  list-style-type: none;
+  overflow: hidden;
+  height: 200px;
+  font-size: 0;
+}
+
+
+.tabs {
+  display: inline-block;
+  background-color: $list;
+  border-right: $border 1px solid;
+  width: 80px;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+  font-size: 16px;
+  @include transition(0.4 , 0.1);
+  &:hover {
+    width: 450px;
+    .social-links a {
+      &:before {
+        margin-left: -100px;
+      }
+      &:after {
+        margin-left: -5px;
+      }
+    }
+  }
+  .paragraph {
+    position: relative;
+    width: 360px;
+    margin-left: 80px;
+    padding: 50px 0 0 10px;
+    height: 200px;
+    background: $geneicons;
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 0.88em;
+      line-height: 1.5em;
+      padding-right: 30px;
+    }
+  }
+}
+
+.social-links {
+  display: block;
+  a {
+    display: block;
+    text-indent: -9999px;
+    font-size: 0;
+    line-height: 0;
+    &:before, &:after {
+      @include transition(0.4 , 0.1);
+      width: 80px;
+      height: 200px;
+      position: absolute;
+      text-indent: 0;
+      padding-top: 90px;
+      padding-left: 25px;
+      display: block;
+      font: normal 30px Genericons;
+      color: $geneicons;
+    }
+    &:after {
+      font-size: 48px;
+      padding-left: 20px;
+      padding-top: 80px;
+      margin-left: 85px;
+    }
+  }
+}
+
+.twitter-icon a {
+  &:before, &:after {
+    content: '\f202';
+  }
+  &:after {
+    @include background-image(#7adcf9, #4bc9f5);
+  }
+}
+
+.facebook-icon a {
+  &:before, &:after {
+    content: '\f204';
+  }
+  &:after {
+    @include background-image(#548abf, #295b9e);
+  }
+}
+
+.linkedin-icon a {
+  &:before, &:after {
+    content: '\f208';
+  }
+  &:after {
+    content: '\f208';
+    @include background-image(#00a9cd, #0083b4);
+  }
+}
+
+.insta-icon a {
+  &:before, &:after {
+    content: '\f215';
+  }
+  &:after {
+    @include background-image(#7fc121, #298733);
+  }
+}
+
+.youtube-icon a {
+  &:before, &:after {
+    content: '\f213';
+  }
+  &:after {
+    @include background-image(#df192a, #c41222);
+  }
+}
+
+.tumblr-icon a {
+  &:before, &:after {
+    content: '\f214';
+  }
+  &:after {
+    @include background-image(#283e56, #325372);
+  }
+}
+
+.dribbble-icon a {
+  &:before, &:after {
+    content: '\f201';
+  }
+  &:after {
+    @include background-image(#e03a70, #f189b8);
+  }
+}
