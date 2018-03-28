@@ -87,6 +87,12 @@ header {
   justify-content: space-between;
   background: $border;
   width: 100%;
+  .dropdown-item{
+    i{
+      margin-right: 5px;
+    }
+  }
+
 
 }
 
@@ -183,7 +189,6 @@ header {
   }
 }
 
-
 .search-icon a {
   &:before, &:after {
     content: '\e802';
@@ -192,8 +197,6 @@ header {
     @include background-image(#283e56, #325372);
   }
 }
-
-
 
 .administration-icon a {
   &:before, &:after {
