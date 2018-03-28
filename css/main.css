@@ -1,4 +1,6 @@
 @charset "UTF-8";
+/* Updated version - 24th Nov 2014 */
+/*$backgroundColor: #f76462*/
 @font-face {
   font-family: 'fontello';
   src: url("../fonts/fontello.eot?68330079");
@@ -54,8 +56,6 @@
   content: '\e802'; }
 
 /* '¯áé' */
-/* Updated version - 24th Nov 2014 */
-/*$backgroundColor: #f76462*/
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -98,12 +98,6 @@ body {
   background: none;
   font-family: Lato, sans-serif; }
 
-@font-face {
-  font-family: 'Genericons';
-  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/53819/genericons-regular-webfont.eot");
-  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/53819/genericons-regular-webfont.woff") format("woff"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/53819/genericons-regular-webfont.eot") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
 header {
   display: flex;
   justify-content: space-between;
@@ -175,7 +169,7 @@ header {
       padding-top: 15px;
       padding-left: 10px;
       display: block;
-      font: normal 2rem Genericons;
+      font: normal 2rem fontello;
       color: #fff; }
     .social-links a:after {
       font-size: 40px;
@@ -184,9 +178,8 @@ header {
       margin-left: 85px; }
 
 .skills-icon a:before, .skills-icon a:after {
-  content: '\f444'; }
+  content: '\e800'; }
 .skills-icon a:after {
-  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzU0OGFiZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzI5NWI5ZSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==");
   background-size: 100%;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #7adcf9), color-stop(100%, #4bc9f5));
   background-image: -moz-linear-gradient(#7adcf9, #4bc9f5);
@@ -194,9 +187,8 @@ header {
   background-image: linear-gradient(#7adcf9, #4bc9f5); }
 
 .search-icon a:before, .search-icon a:after {
-  content: '\f400'; }
+  content: '\e802'; }
 .search-icon a:after {
-  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzU0OGFiZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzI5NWI5ZSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==");
   background-size: 100%;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #283e56), color-stop(100%, #325372));
   background-image: -moz-linear-gradient(#283e56, #325372);
@@ -204,9 +196,8 @@ header {
   background-image: linear-gradient(#283e56, #325372); }
 
 .administration-icon a:before, .administration-icon a:after {
-  content: '\f408'; }
+  content: '\e801'; }
 .administration-icon a:after {
-  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzU0OGFiZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzI5NWI5ZSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==");
   background-size: 100%;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #00a9cd), color-stop(100%, #0083b4));
   background-image: -moz-linear-gradient(#00a9cd, #0083b4);
@@ -274,25 +265,5 @@ main {
 .footer {
   display: flex;
   flex-wrap: wrap; }
-  .footer-social-links ul {
-    display: flex;
-    justify-content: baseline;
-    align-content: center; }
-  .footer-social-links li {
-    display: flex; }
-    .footer-social-links li a {
-      color: rgba(255, 255, 255, 0.9);
-      display: flex;
-      justify-content: center;
-      align-content: center;
-      padding: 9px;
-      margin-left: 3px;
-      width: 35px;
-      height: 35px;
-      background-color: rgba(0, 0, 0, 0.2);
-      border-radius: 50%;
-      font-weight: bold; }
-      .footer-social-links li a:hover {
-        background-color: rgba(0, 0, 0, 0.3); }
 
 /*# sourceMappingURL=main.css.map */
