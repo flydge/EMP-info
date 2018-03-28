@@ -128,8 +128,22 @@ header {
       }
     }
   }
-
 }
+
+.activeTab{
+  &{
+    width: 450px;
+    .social-links a {
+      &:before {
+        margin-left: -100px;
+      }
+      &:after {
+        margin-left: -0px;
+      }
+    }
+  }
+}
+
 .paragraph {
   position: relative;
   width: 450px;
@@ -138,7 +152,6 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   height: 100%;
   background: $geneicons;
   h1 {

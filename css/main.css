@@ -142,6 +142,13 @@ header {
     .tabs:hover .social-links a:after {
       margin-left: -0px; }
 
+.activeTab {
+  width: 450px; }
+  .activeTab .social-links a:before {
+    margin-left: -100px; }
+  .activeTab .social-links a:after {
+    margin-left: -0px; }
+
 .paragraph {
   position: relative;
   width: 450px;

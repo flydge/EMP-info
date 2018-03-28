@@ -6,13 +6,13 @@
 
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
-
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
 </head>
 <body>
 <header class="border-bottom fixed-top">
     <div>
         <ul class="accordion">
-            <li class="tabs">
+            <li class="tabs activeTab" >
                 <div class="social-links search-icon">
                     <a>searchLink</a>
                 </div>
@@ -41,6 +41,43 @@
             </li>
         </ul>
     </div>
+
+    <script type="text/javascript">
+        var headers = ["LI"];
+
+        $(".accordion").click(function(e) {
+            var target = e.target,
+                name = target.nodeName.toUpperCase();
+
+            if($(target.parentNode.parentNode).hasClass("activeTab")){
+                $(target.parentNode.parentNode).removeClass("activeTab")
+            }else {
+                $(target.parentNode.parentNode).addClass("activeTab");
+            }
+
+            console.log("wefwf: " + target.parentNode.parentNode.parentNode);
+            console.log("wefwf: " + target.parentNode.parentNode.parentNode.childNodes)
+
+            /* if($.inArray(name,headers) > -1) {
+                 var subItem = $(target).next();
+
+                 //slideUp all elements (except target) at current depth or greater
+                 var depth = $(subItem).parents().length;
+                 var allAtDepth = $(".accordion p, .accordion div").filter(function() {
+                     if($(this).parents().length >= depth && this !== subItem.get(0)) {
+                         return true;
+                     }
+                 });
+                 $(allAtDepth).slideUp("fast");
+
+                 //slideToggle target content and adjust bottom border if necessary
+                 subItem.slideToggle("fast",function() {
+                     $(".accordion :visible:last").css("border-radius","0 0 10px 10px");
+                 });
+                 $(target).css({"border-bottom-right-radius":"0", "border-bottom-left-radius":"0"});
+             }*/
+        });
+    </script>
 
     <div class="d-flex justify-content-between text-light mt-4 mr-4">
         <p>Добрый день, </p>
