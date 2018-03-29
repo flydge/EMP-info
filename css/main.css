@@ -222,6 +222,13 @@ header {
   background-image: -webkit-linear-gradient(#00a9cd, #0083b4);
   background-image: linear-gradient(#00a9cd, #0083b4); }
 
+#activePage {
+  z-index: -1;
+  width: 399px;
+  border: 0;
+  margin-left: 150px;
+  position: absolute; }
+
 .d-flex {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
