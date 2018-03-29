@@ -1,7 +1,6 @@
 $(".tabs").click(function(e) {
     let target = e.target;
-    console.log(target.parentElement.tagName);
-    console.log(target.parentElement.tagName);
+    //console.log(target.parentElement.tagName);
     if($(target.parentNode.parentNode).hasClass("activeTab")){
     }else {
         let childs = target.parentNode.parentNode.parentNode.childNodes;

@@ -193,6 +193,7 @@ header {
   justify-content: center;
   height: 100%;
   background: $geneicons;
+  user-select: none;
   h1 {
     font-size: 25px;
   }
