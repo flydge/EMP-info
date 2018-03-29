@@ -120,6 +120,13 @@ header {
   height: 60px;
   font-size: 0; }
 
+.deactiveTab {
+  width: 50px; }
+  .deactiveTab .social-links a:before {
+    margin-left: 0; }
+  .deactiveTab .social-links a:after {
+    margin-left: 85px; }
+
 .tabs {
   display: inline-block;
   background-color: #6dc5dd;
@@ -136,19 +143,39 @@ header {
   -webkit-transition: all 0.4s ease-in-out;
   -webkit-transition-delay: 0.1s;
   transition: all 0.4s ease-in-out 0.1s; }
-  .tabs:hover {
+  .tabs-hover:hover {
     width: 450px; }
-    .tabs:hover .social-links a:before {
+    .tabs-hover:hover .social-links a:before {
       margin-left: -100px; }
-    .tabs:hover .social-links a:after {
+    .tabs-hover:hover .social-links a:after {
       margin-left: -0px; }
 
+/*#tab1{
+  &{
+    width: 50px;
+    .social-links a {
+      &:before {
+        margin-left: 0;
+      }
+      &:after {
+        margin-left: 85px;
+      }
+    }
+  }
+}*/
 .activeTab {
   width: 450px; }
   .activeTab .social-links a:before {
     margin-left: -100px; }
   .activeTab .social-links a:after {
     margin-left: -0px; }
+
+.activeTab-deactivated {
+  width: 50px; }
+  .activeTab-deactivated .social-links a:before {
+    margin-left: 0; }
+  .activeTab-deactivated .social-links a:after {
+    margin-left: 85px; }
 
 .paragraph {
   position: relative;
@@ -226,6 +253,7 @@ header {
   z-index: -1;
   width: 399px;
   border: 0;
+  font-size: 12px;
   margin-left: 150px;
   position: absolute; }
 
