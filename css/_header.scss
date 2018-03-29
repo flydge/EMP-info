@@ -116,6 +116,7 @@ header {
   position: relative;
   margin: 0;
   font-size: 12px;
+  cursor: pointer;
   @include transition(0.4 , 0.1);
   &:hover {
     width: 450px;

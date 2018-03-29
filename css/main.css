@@ -130,6 +130,7 @@ header {
   position: relative;
   margin: 0;
   font-size: 12px;
+  cursor: pointer;
   -moz-transition: all 0.4s ease-in-out 0.1s;
   -o-transition: all 0.4s ease-in-out 0.1s;
   -webkit-transition: all 0.4s ease-in-out;
