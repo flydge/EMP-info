@@ -7,21 +7,16 @@
   display: flex !important
 
 
-
 main
   margin-top: 60px
 
   .top-content
-    padding: 15px 0
-    padding-right: 20%
+    padding: 15px 20% 15px 0
     border-bottom: 1px solid $borderColor
     ul
       li
         margin-left: 5px
-  .central-block
-    display: flex
-    justify-content: center
-    padding-top: 10px
+
   .aside-block
     padding-top: 10px
     input
@@ -47,26 +42,39 @@ main
   .central-block
     display: flex
     flex-wrap: wrap
-    flex-direction: column
-    align-items: center
+    justify-content: space-around
+
+    padding-top: 10px
+    background-color: $white
     padding-bottom: 3rem
     .badge
       display: block
       height: 1rem
       width: 16rem
     .card
-      width: 16rem
+      width: 15rem
+      margin: 0 20px
       margin-top: 20px
       .card-header
         font-weight: bold
 
   .right-block
+
     border-left: 1px solid $borderColor
-    .aside-menu
-      &-sect
-        margin-left: 3rem
+
+
+    //max-width: 200px
+    &-menu
+
+      .aside-menu
+        &-sect
+          margin-left: 3rem
+
 
 
 .footer
   display: flex
   flex-wrap: wrap
+
+.box-shadow
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05)

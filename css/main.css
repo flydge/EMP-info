@@ -70,7 +70,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   border: 0;
   font: inherit;
   font-size: 100%;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+  font-family: Lato, sans-serif; }
 
 ol, ul {
   list-style: none; }
@@ -101,7 +102,6 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section {
   display: block; }
 
-/* Variables */
 body {
   background: none;
   font-family: Lato, sans-serif; }
@@ -111,8 +111,12 @@ header {
   justify-content: space-between;
   background: #5ab2ca;
   width: 100%; }
-  header .dropdown-item i {
-    margin-right: 5px; }
+  header .userContext {
+    margin-right: 10px; }
+    header .userContext .dropdown-item i {
+      margin-right: 5px; }
+    header .userContext p {
+      margin-left: 5px; }
 
 .accordion {
   display: block;
@@ -150,19 +154,6 @@ header {
     .tabs-hover:hover .social-links a:after {
       margin-left: -0px; }
 
-/*#tab1{
-  &{
-    width: 50px;
-    .social-links a {
-      &:before {
-        margin-left: 0;
-      }
-      &:after {
-        margin-left: 85px;
-      }
-    }
-  }
-}*/
 .activeTab {
   width: 450px; }
   .activeTab .social-links a:before {
@@ -189,11 +180,12 @@ header {
   background: #fff;
   user-select: none; }
   .paragraph h1 {
-    font-size: 25px; }
+    font-size: 1.55rem; }
   .paragraph p {
-    font-size: 0.88em;
+    font-size: 0.9rem;
     line-height: 1.5em;
-    padding-right: 30px; }
+    padding-right: 30px;
+    opacity: 0.9; }
 
 .social-links {
   display: block; }
@@ -212,15 +204,15 @@ header {
       height: 60px;
       position: absolute;
       text-indent: 0;
-      padding-top: 15px;
-      padding-left: 10px;
+      padding-top: 1.2rem;
+      padding-left: 0.85rem;
       display: block;
-      font: normal 2rem fontello;
+      font: normal 1.5rem fontello;
       color: #fff; }
     .social-links a:after {
-      font-size: 40px;
-      padding-left: 5px;
-      padding-top: 11px;
+      font-size: 2rem;
+      padding-left: 0.6rem;
+      padding-top: 0.8rem;
       margin-left: 85px; }
 
 .skills-icon a:before, .skills-icon a:after {
@@ -266,15 +258,10 @@ header {
 main {
   margin-top: 60px; }
   main .top-content {
-    padding: 15px 0;
-    padding-right: 20%;
+    padding: 15px 20% 15px 0;
     border-bottom: 1px solid #ababab; }
     main .top-content ul li {
       margin-left: 5px; }
-  main .central-block {
-    display: flex;
-    justify-content: center;
-    padding-top: 10px; }
   main .aside-block {
     padding-top: 10px; }
     main .aside-block input {
@@ -299,25 +286,30 @@ main {
   main .central-block {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-around;
+    padding-top: 10px;
+    background-color: #F5F6FA;
     padding-bottom: 3rem; }
     main .central-block .badge {
       display: block;
       height: 1rem;
       width: 16rem; }
     main .central-block .card {
-      width: 16rem;
+      width: 15rem;
+      margin: 0 20px;
       margin-top: 20px; }
       main .central-block .card .card-header {
         font-weight: bold; }
   main .right-block {
     border-left: 1px solid #ababab; }
-    main .right-block .aside-menu-sect {
+    main .right-block-menu .aside-menu-sect {
       margin-left: 3rem; }
 
 .footer {
   display: flex;
   flex-wrap: wrap; }
+
+.box-shadow {
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05); }
 
 /*# sourceMappingURL=main.css.map */
