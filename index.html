@@ -11,7 +11,7 @@
     <script src="node_modules/jquery-ui-dist/jquery-ui.min.js"></script>
 </head>
 <body>
-<header class="border-bottom fixed-top">
+<header class="box-shadow fixed-top">
     <div>
         <ul class="accordion">
             <li class="tabs tabs-hover activeTab" id="tab1">
@@ -44,9 +44,8 @@
         </ul>
     </div>
 
+    <div class="d-flex justify-content-between userContext align-items-center">
 
-    <div class="d-flex justify-content-between text-light userContext align-items-center">
-        <p>Добрый день,</p>
         <p class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
         >Петров Иван Сергеевич</p>
@@ -61,26 +60,12 @@
 
 <main>
     <div class="">
-        <div class="top-content  d-flex justify-content-end w-100 ">
-            <ul class="d-flex">
-                <li><button type="button" class="btn btn-success btn-sm">Печать</button></li>
-                <li><button type="button" class="btn btn-success btn-sm">Выгрузка</button></li>
-                <li>
-                    <div class="form-check mt-1 ml-4">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                        <label class="form-check-label mt-1" for="defaultCheck1">
-                            Мои сотрудники
-                        </label>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <!-- /.top-content -->
+
         <div class=" d-flex flex-nowrap">
             <div  class="aside-block left-block col-auto  resizableLeftMenu">
                 <form class="form-inline">
                     <input class="form-control form-control-sm" type="search" placeholder="Поиск" aria-label="Search">
-                    <button class="btn btn-sm btn-info ml-1" type="submit">Найти</button>
+                    <button class="btn btn-sm btn-info icon-search" type="submit"></button>
                 </form>
 
                 <details open class="aside-menu">
@@ -92,7 +77,7 @@
                             </label>
                         </div>
                     </summary>
-                    <details>
+                    <details open>
                         <summary class="aside-menu-dep">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="asideMenuId2">
@@ -101,7 +86,7 @@
                                 </label>
                             </div>
                         </summary>
-                        <details class="aside-menu-sect">
+                        <details open class="aside-menu-sect">
                             <summary >
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="asideMenuId3">
@@ -114,7 +99,7 @@
                             <p>Иванов Иван Иванович</p>
                             <p>Иванов Иван Иванович</p>
                         </details>
-                        <details class="aside-menu-sect">
+                        <details open class="aside-menu-sect">
                             <summary >
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="asideMenuId3">
@@ -127,7 +112,7 @@
                             <p>Иванов Иван Иванович</p>
                             <p>Иванов Иван Иванович</p>
                         </details>
-                        <details class="aside-menu-sect">
+                        <details open class="aside-menu-sect">
                             <summary >
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="asideMenuId3">
@@ -142,7 +127,7 @@
                         </details>
                     </details>
                     <!-- /.department -->
-                    <details>
+                    <details open>
                         <summary class="aside-menu-dep">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="asideMenuId2">
@@ -151,7 +136,7 @@
                                 </label>
                             </div>
                         </summary>
-                        <details class="aside-menu-sect">
+                        <details open class="aside-menu-sect">
                             <summary >
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="asideMenuId3">
@@ -164,7 +149,7 @@
                             <p>Иванов Иван Иванович</p>
                             <p>Иванов Иван Иванович</p>
                         </details>
-                        <details class="aside-menu-sect">
+                        <details open class="aside-menu-sect">
                             <summary >
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="asideMenuId3">
@@ -192,7 +177,7 @@
                         </details>
                     </details>
                     <!-- /.department -->
-                    <details>
+                    <details open>
                         <summary class="aside-menu-dep">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="asideMenuId2">
@@ -300,66 +285,147 @@
 
             <div class="resizableLeftMenu central-block">
 
-                    <div class="badge badge-info">Найдено 3 результата:</div>
-                    <div class="w-100"></div>
-                    <!-- /.badge -->
+                <div>
+                    <div class="cardsFound">
+                        <div class="">
+                            <span class="text-muted">Найдено 3 результата</span>
+                        </div>
+                        <div class="download-print">
+                            <div class="myEmpSwitch">
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                                <label class="form-check-label" for="defaultCheck1">
+                                    Только мои сотрудники
+                                </label>
+                            </div>
+                            <div class="trigger">
+                                <a href="#" class="icon-download"></a>
+                                <div class="el"><p class="badge badge-secondary">Выгрузка</p></div>
+                            </div>
+                            <div class="trigger">
+                                <a href="#" class="icon-print"></a>
+                                <div class="el"><p class="badge badge-secondary">Печать</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card border-light box-shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">Иванов Иван Иванович</h5>
+                            <h6 class="card-subtitle text-muted">1-e отделение</h6>
+                            <span class="badge badge-secondary box-shadow">Html5</span>
+                            <span class="badge badge-secondary box-shadow">Css3</span>
+                            <span class="badge badge-secondary box-shadow">Angular5</span>
+                            <span class="badge badge-secondary box-shadow">NodeJs</span>
+                            <span class="badge badge-secondary box-shadow">ES6</span>
+                        </div>
+                    </div>
+                </div>
 
-                    <div class="card box-shadow">
-                        <div class="card-header">
-                            Иванов Иван Иванович
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Angular</li>
-                            <li class="list-group-item">Js</li>
-                            <li class="list-group-item">Java</li>
-                        </ul>
+                <div class="card border-light box-shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">Иванов Иван Иванович</h5>
+                        <h6 class="card-subtitle text-muted">1-e отделение</h6>
+                        <span class="badge badge-secondary box-shadow">Html5</span>
+                        <span class="badge badge-secondary box-shadow">Css3</span>
+                        <span class="badge badge-secondary box-shadow">Angular5</span>
+                        <span class="badge badge-secondary box-shadow">NodeJs</span>
+                        <span class="badge badge-secondary box-shadow">ES6</span>
                     </div>
-                    <div class="card box-shadow">
-                        <div class="card-header">
-                            Иванов Иван Иванович
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Angular</li>
-                            <li class="list-group-item">Js</li>
-                            <li class="list-group-item">Java</li>
-                            <li class="list-group-item">HTML</li>
-                            <li class="list-group-item">Css</li>
-                        </ul>
+                </div>
+                <div class="card border-light box-shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">Иванов Иван Иванович</h5>
+                        <h6 class="card-subtitle text-muted">1-e отделение</h6>
+                        <span class="badge badge-secondary box-shadow">Html5</span>
+                        <span class="badge badge-secondary box-shadow">Css3</span>
+                        <span class="badge badge-secondary box-shadow">Angular5</span>
+                        <span class="badge badge-secondary box-shadow">ES6</span>
                     </div>
-                    <div class="card box-shadow">
-                        <div class="card-header">
-                            Иванов Иван Иванович
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Angular</li>
-                            <li class="list-group-item">Js</li>
-                            <li class="list-group-item">Java</li>
-                            <li class="list-group-item">HTML</li>
-                            <li class="list-group-item">Css</li>
-                        </ul>
+                </div>
+                <div class="card border-light box-shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">Иванов Иван Иванович</h5>
+                        <h6 class="card-subtitle text-muted">1-e отделение</h6>
+                        <span class="badge badge-secondary box-shadow">Html5</span>
+                        <span class="badge badge-secondary box-shadow">Css3</span>
+                        <span class="badge badge-secondary box-shadow">Angular5</span>
+
                     </div>
-                    <div class="card box-shadow">
-                        <div class="card-header">
-                            Иванов Иван Иванович
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Angular</li>
-                            <li class="list-group-item">Js</li>
-                            <li class="list-group-item">Java</li>
-                            <li class="list-group-item">HTML</li>
-                            <li class="list-group-item">Css</li>
-                        </ul>
+                </div>
+                <div class="card border-light box-shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">Иванов Иван Иванович</h5>
+                        <h6 class="card-subtitle text-muted">1-e отделение</h6>
+                        <span class="badge badge-secondary box-shadow">Html5</span>
+                        <span class="badge badge-secondary box-shadow">Css3</span>
+                        <span class="badge badge-secondary box-shadow">NodeJs</span>
+                        <span class="badge badge-secondary box-shadow">ES6</span>
                     </div>
-                    <div class="card box-shadow">
-                        <div class="card-header">
-                            Иванов Иван Иванович
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Angular</li>
-                            <li class="list-group-item">Js</li>
-                            <li class="list-group-item">Java</li>
-                        </ul>
+                </div>
+                <div class="card border-light box-shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">Иванов Иван Иванович</h5>
+                        <h6 class="card-subtitle text-muted">1-e отделение</h6>
+                        <span class="badge badge-secondary box-shadow">Html5</span>
+                        <span class="badge badge-secondary box-shadow">Css3</span>
+                        <span class="badge badge-secondary box-shadow">NodeJs</span>
+                        <span class="badge badge-secondary box-shadow">ES6</span>
                     </div>
+                </div>
+
+                <div class="card border-light box-shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">Иванов Иван Иванович</h5>
+                        <h6 class="card-subtitle text-muted">1-e отделение</h6>
+                        <span class="badge badge-secondary box-shadow">Html5</span>
+                        <span class="badge badge-secondary box-shadow">Css3</span>
+                        <span class="badge badge-secondary box-shadow">Angular5</span>
+                        <span class="badge badge-secondary box-shadow">NodeJs</span>
+                        <span class="badge badge-secondary box-shadow">ES6</span>
+                    </div>
+                </div>
+                <div class="card border-light box-shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">Иванов Иван Иванович</h5>
+                        <h6 class="card-subtitle text-muted">1-e отделение</h6>
+                        <span class="badge badge-secondary box-shadow">Html5</span>
+                        <span class="badge badge-secondary box-shadow">Css3</span>
+                        <span class="badge badge-secondary box-shadow">Angular5</span>
+                        <span class="badge badge-secondary box-shadow">ES6</span>
+                    </div>
+                </div>
+                <div class="card border-light box-shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">Иванов Иван Иванович</h5>
+                        <h6 class="card-subtitle text-muted">1-e отделение</h6>
+                        <span class="badge badge-secondary box-shadow">Html5</span>
+                        <span class="badge badge-secondary box-shadow">Css3</span>
+                        <span class="badge badge-secondary box-shadow">Angular5</span>
+
+                    </div>
+                </div>
+                <div class="card border-light box-shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">Иванов Иван Иванович</h5>
+                        <h6 class="card-subtitle text-muted">1-e отделение</h6>
+                        <span class="badge badge-secondary box-shadow">Html5</span>
+                        <span class="badge badge-secondary box-shadow">Css3</span>
+                        <span class="badge badge-secondary box-shadow">NodeJs</span>
+                        <span class="badge badge-secondary box-shadow">ES6</span>
+                    </div>
+                </div>
+                <div class="card border-light box-shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">Иванов Иван Иванович</h5>
+                        <h6 class="card-subtitle text-muted">1-e отделение</h6>
+                        <span class="badge badge-secondary box-shadow">Html5</span>
+                        <span class="badge badge-secondary box-shadow">Css3</span>
+                        <span class="badge badge-secondary box-shadow">NodeJs</span>
+                        <span class="badge badge-secondary box-shadow">ES6</span>
+                    </div>
+                </div>
 
             </div>
             <!-- /.central-block -->
@@ -367,8 +433,9 @@
             <div class="aside-block col-auto right-block">
                 <form class="form-inline">
                     <input class="form-control form-control-sm" type="search" placeholder="Поиск" aria-label="Search">
-                    <button class="btn btn-sm btn-info ml-1" type="submit">Найти</button>
+                    <button class="btn btn-sm btn-info icon-search" type="submit"></button>
                 </form>
+
 
                 <div class="right-block-menu">
                     <details>
@@ -496,7 +563,7 @@
     <!-- /.content -->
 </main>
 
-<footer class="card-footer text-muted">
+<footer class="card-footer text-muted align-bottom">
     <div class="container">
         <p class="float-right">
             <a href="#">Back to top</a>

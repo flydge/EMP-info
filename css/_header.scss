@@ -2,9 +2,9 @@
 /*$backgroundColor: #f76462*/;
 @import "fontello";
 $backgroundColor: none;
-$list: #6dc5dd;
-$border: #5ab2ca;
-$geneicons: #fff;
+$list: #ffffff;
+$border: #ffffff;
+$geneicons: #292929;
 
 @mixin background-image($imgColor1, $imgColor2) {
   background-size: 100%;
@@ -182,6 +182,7 @@ header {
   justify-content: center;
   height: 100%;
   background: $geneicons;
+  background: white;
   user-select: none;
 
   h1 {
@@ -216,9 +217,9 @@ header {
       color: $geneicons;
     }
     &:after {
-      font-size: 2rem;
-      padding-left: 0.6rem;
-      padding-top: 0.8rem;
+      font-size: 1.75rem;
+      padding-left: 0.7rem;
+      padding-top: 1rem;
       margin-left: 85px;
     }
   }
@@ -229,7 +230,7 @@ header {
     content: '\e800';
   }
   &:after {
-    @include background-image(#7adcf9, #4bc9f5);
+    @include background-image(white, white);
   }
 }
 
@@ -239,15 +240,18 @@ header {
   }
   &:after {
     @include background-image(#283e56, #325372);
+    @include background-image(white, white);
   }
 }
 
 .administration-icon a {
   &:before, &:after {
+    padding-left: 0.8rem;
     content: '\e801';
   }
   &:after {
     @include background-image(#00a9cd, #0083b4);
+    @include background-image(white, white);
   }
 }
 
