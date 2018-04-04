@@ -4,7 +4,7 @@
 $backgroundColor: none;
 $list: #ffffff;
 $border: #ffffff;
-$geneicons: #292929;
+$geneicons: #ffffff;
 
 @mixin background-image($imgColor1, $imgColor2) {
   background-size: 100%;
@@ -12,6 +12,7 @@ $geneicons: #292929;
   background-image: -moz-linear-gradient($imgColor1, $imgColor2);
   background-image: -webkit-linear-gradient($imgColor1, $imgColor2);
   background-image: linear-gradient($imgColor1, $imgColor2);
+
 }
 
 @mixin transition ($allTime, $easeInOutTime) {
@@ -85,7 +86,7 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  background: $border;
+  background: #17283A;
   width: 100%;
   .userContext{
     margin-right: 10px;
@@ -96,6 +97,7 @@ header {
     }
     p{
       margin-left: 5px;
+      color: white;
     }
   }
 }
@@ -124,8 +126,9 @@ header {
 
 .tabs {
   display: inline-block;
-  background-color: $list;
-  border-right: $border 1px solid;
+  background-color: #17283A;
+  border-right: #17283A 1px solid;
+  //border-right: #304050 1px solid;
   width: 50px;
   height: 60px;
   overflow: hidden;
@@ -181,9 +184,9 @@ header {
   flex-direction: column;
   justify-content: center;
   height: 100%;
-  background: $geneicons;
-  background: white;
+  background: #304050;
   user-select: none;
+  color: white;
 
   h1 {
     font-size: 1.55rem;
@@ -214,7 +217,7 @@ header {
       padding-left: 0.85rem;
       display: block;
       font: normal 1.5rem fontello;
-      color: $geneicons;
+      color: white;
     }
     &:after {
       font-size: 1.75rem;
@@ -231,6 +234,11 @@ header {
   }
   &:after {
     @include background-image(white, white);
+    @include background-image(rgba(23, 40, 58, 0.5), rgba(23, 40, 58, 0.5));
+    @include background-image(#304050, #304050);
+  }
+  &:before {
+    color: rgba(255, 255, 255, 0.5);
   }
 }
 
@@ -241,6 +249,11 @@ header {
   &:after {
     @include background-image(#283e56, #325372);
     @include background-image(white, white);
+    @include background-image(rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.13));
+    @include background-image(#304050, #304050);
+  }
+  &:before {
+    color: rgba(255, 255, 255, 0.5);
   }
 }
 
@@ -251,7 +264,11 @@ header {
   }
   &:after {
     @include background-image(#00a9cd, #0083b4);
-    @include background-image(white, white);
+    @include background-image(rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.13));
+    @include background-image(#304050, #304050);
+  }
+  &:before {
+    color: rgba(255, 255, 255, 0.5);
   }
 }
 
