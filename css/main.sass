@@ -11,14 +11,11 @@
 
 main
   margin-top: 60px
-
-
-
+  display: flex
   .aside-block
-    padding-top: 10px
+    padding-top: 50px
     padding-bottom: 50px
     //overflow-y: auto
-    height: var(asideBlockHeight)
     i
       margin-right: -25px
       z-index: 4
@@ -27,9 +24,9 @@ main
       margin-top: 0
       border: none
       border-bottom: 1px solid #304050
-
     .aside-menu
       margin-top: 20px
+      margin-right: 10px
       &-dep
         margin-top: 1rem
         margin-left: 1rem
@@ -46,6 +43,14 @@ main
 
   .left-block
     border-right: 1px solid rgba(48, 64, 80, 0.2)
+    padding-left: 10px
+    position: fixed
+    left: 0
+    height: var(--leftBlockHeight)
+    z-index: 2
+    background-color: #fff
+    overflow-y: auto
+
   .central-block
     display: flex
     flex-wrap: wrap
@@ -53,6 +58,8 @@ main
     padding-top: 10px
     padding-bottom: 100px
     background-color: $white
+    padding-left: var(--centralBlockLeftPadding)
+    padding-right: var(--centralBlockRightPadding)
     .card
       width: 15rem
       margin: 110px 10px -70px
@@ -63,13 +70,21 @@ main
       .badge
         border: none
         margin-bottom: 5px
-        background-color: #304050
+        background-color: #2D8EF3
         color: white
       .card-header
         font-weight: bold
 
   .right-block
     border-left: 1px solid rgba(48, 64, 80, 0.2)
+    padding-left: 5px
+    position: fixed
+    width: var(--rightBlockWidth)
+    height: var(--rightBlockHeight)
+    right: 0
+    z-index: 2
+    overflow-y: auto
+    background-color: #fff
     &-menu
       .aside-menu
         &-sect
@@ -93,10 +108,10 @@ main
   flex-wrap: wrap
   position: absolute
   justify-content: space-between
-  width: 100%
   margin-left: 10px
   margin-top: 45px
   font-size: 1.5rem
+  width: var(--cardsFoundWidth)
   .myEmpSwitch
     font-size: 1rem
     margin-top: 5px
@@ -105,7 +120,7 @@ main
     label
       margin-left: 7px
   .download-print
-    margin-right: 40px
+
     display: flex
     flex-wrap: wrap
     a
