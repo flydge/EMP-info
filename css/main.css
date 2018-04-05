@@ -356,6 +356,9 @@ input:checked + .slider:before {
   display: -ms-flexbox !important;
   display: flex !important; }
 
+body {
+  overflow: hidden; }
+
 main {
   margin-top: 60px;
   display: flex; }
@@ -370,6 +373,9 @@ main {
       margin-top: 0;
       border: none;
       border-bottom: 1px solid #304050; }
+    main .aside-block form {
+      z-index: 3;
+      background-color: white; }
     main .aside-block .aside-menu {
       margin-top: 20px;
       margin-right: 10px; }
@@ -399,11 +405,13 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    position: relative;
     padding-top: 10px;
     padding-bottom: 100px;
     background-color: #F5F6FA;
     padding-left: var(--centralBlockLeftPadding);
-    padding-right: var(--centralBlockRightPadding); }
+    height: var(--centralBlockHeight);
+    overflow-y: auto; }
     main .central-block .card {
       width: 15rem;
       margin: 110px 10px -70px; }
@@ -418,11 +426,13 @@ main {
         color: white; }
       main .central-block .card .card-header {
         font-weight: bold; }
+  main .central-block-child {
+    height: var(--centralBlockChildHeight);
+    padding-left: var(--centralBlockRightPadding); }
   main .right-block {
     border-left: 1px solid rgba(48, 64, 80, 0.2);
     padding-left: 5px;
     position: fixed;
-    width: var(--rightBlockWidth);
     height: var(--rightBlockHeight);
     right: 0;
     z-index: 2;
@@ -450,7 +460,8 @@ main {
   margin-left: 10px;
   margin-top: 45px;
   font-size: 1.5rem;
-  width: var(--cardsFoundWidth); }
+  width: var(--cardsFoundWidth);
+  min-width: 200px; }
   .cardsFound .myEmpSwitch {
     font-size: 1rem;
     margin-top: 5px;
