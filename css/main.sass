@@ -2,6 +2,7 @@
 @import "header"
 @import "switch"
 
+
 .d-flex
   display: -webkit-box !important
   display: -ms-flexbox !important
@@ -13,21 +14,20 @@ main
 
 
 
-  .top-content
-    padding: 15px 20% 15px 0
-    border-bottom: 1px solid $borderColor
-    ul
-      li
-        margin-left: 5px
-
   .aside-block
     padding-top: 10px
     padding-bottom: 50px
     //overflow-y: auto
     height: var(asideBlockHeight)
+    i
+      margin-right: -25px
+      z-index: 4
     input
+      padding-left: 27px
       margin-top: 0
-      content: '\e802'
+      border: none
+      border-bottom: 1px solid #304050
+
     .aside-menu
       margin-top: 20px
       &-dep
@@ -45,7 +45,7 @@ main
           line-height: 1.3rem
 
   .left-block
-    border-right: 1px solid $borderColor
+    border-right: 1px solid rgba(48, 64, 80, 0.2)
   .central-block
     display: flex
     flex-wrap: wrap
@@ -63,11 +63,13 @@ main
       .badge
         border: none
         margin-bottom: 5px
+        background-color: #304050
+        color: white
       .card-header
         font-weight: bold
 
   .right-block
-    border-left: 1px solid $borderColor
+    border-left: 1px solid rgba(48, 64, 80, 0.2)
     &-menu
       .aside-menu
         &-sect
@@ -77,6 +79,7 @@ main
 .footer
   display: flex
   flex-wrap: wrap
+  border-top: 1px solid rgba(48, 64, 80, 0.2)
 
 .box-shadow
   box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05)
