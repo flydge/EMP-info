@@ -187,15 +187,18 @@ header {
   background: #304050;
   user-select: none;
   color: white;
-
-  h1 {
-    font-size: 1.55rem;
-  }
-  p {
-    font-size: 0.9rem;
-    line-height: 1.5em;
-    padding-right: 30px;
-    opacity: 0.9;
+  a{
+    text-decoration: none;
+    color: white;
+    h1 {
+      font-size: 1.55rem;
+    }
+    p {
+      font-size: 0.9rem;
+      line-height: 1.5em;
+      padding-right: 30px;
+      opacity: 0.9;
+    }
   }
 }
 

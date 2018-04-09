@@ -1,6 +1,7 @@
 @import "colors"
 @import "header"
 @import "switch"
+@import "scroll"
 
 
 .d-flex
@@ -13,64 +14,78 @@ body
 
 main
   margin-top: 60px
-  display: flex
+  position: relative
   .aside-block
-    padding-top: 50px
-    padding-bottom: 50px
+    padding: 70px 0px 50px 0px
+    overflow-x: hidden
+    min-width: 225px
     i
       margin-right: -25px
-      z-index: 4
+      z-index: 1
     input
       padding-left: 27px
       margin-top: 0
       border: none
       border-bottom: 1px solid #304050
+      border-radius: 0
     form
-      //position: fixed
-      z-index: 3
+      padding-top: 60px
+      margin-top: -80px
+      padding-right: 130px
+      z-index: 1
       background-color: white
+      position: fixed
 
-      //padding-top: 60px
-      //margin-top: -60px
     .aside-menu
       margin-top: 20px
-      //margin-top: 40px
-      margin-right: 10px
+      //padding-left: 10px
+      //margin-left: 20px
+      //padding-right: -10px
+      //details[open]
+        //background: rgba(#E3EFFB, 1)
+        //background: rgba(123, 187, 251, 0.51)
+        //color: #2D8EF3
+        //color: rgba(0, 108, 251, 0.7)
+
       &-dep
         margin-top: 1rem
-        margin-left: 1rem
         display: flex
+        z-index: 2
+        padding-left: 10px
+
       &-sect
         display: flex
-        margin: 10px 0 10px 2rem
+        padding: 10px 5px 0px 30px
         summary
           display: flex
           margin-bottom: 5px
         p
           margin-left: 2.3rem
           line-height: 1.3rem
+          padding-bottom: 5px
+
 
   .left-block
-    border-right: 1px solid rgba(48, 64, 80, 0.2)
-    padding-left: 10px
     position: fixed
     left: 0
     height: var(--leftBlockHeight)
-    z-index: 2
     background-color: #fff
-    overflow-y: auto
+  .left-block-child
+    height: var(--centralBlockChildHeight)
+    padding-right: var(--centralBlockLeftPadding)
 
   .central-block
     display: flex
     flex-wrap: wrap
     justify-content: space-around
     position: relative
+    z-index: 5
     padding-top: 10px
     padding-bottom: 100px
     background-color: $white
-    padding-left: var(--centralBlockLeftPadding)
     height: var(--centralBlockHeight)
-    overflow-y: auto
+    border-left: 1px solid rgba(48, 64, 80, 0.2)
+    border-right: 1px solid rgba(48, 64, 80, 0.2)
     .card
       width: 15rem
       margin: 110px 10px -70px
@@ -91,19 +106,20 @@ main
 
 
   .right-block
-    //opacity: 0.3
-    border-left: 1px solid rgba(48, 64, 80, 0.2)
-    padding-left: 5px
     position: fixed
     height: var(--rightBlockHeight)
     right: 0
-    z-index: 2
-    overflow-y: auto
     background-color: #fff
-    &-menu
-      .aside-menu
-        &-sect
-          margin-left: 3rem
+    form
+      margin-left: 10px
+    .form-check-right
+      padding-left: 68px
+      padding-top: 5px
+      padding-bottom: 5px
+    .aside-menu-dep
+      padding-bottom: 5px
+
+
 
 
 .footer
@@ -126,8 +142,10 @@ main
   margin-left: 10px
   margin-top: 45px
   font-size: 1.5rem
-  width: var(--cardsFoundWidth)
-  min-width: 200px
+  width: 90%
+
+  //width: var(--cardsFoundWidth)
+
 
   .myEmpSwitch
     font-size: 1rem
@@ -139,8 +157,9 @@ main
   .download-print
     display: flex
     flex-wrap: wrap
+    font-weight: 400
     a
-      color: rgba(0, 0, 0, 0.3)
+      color: #666666
       text-decoration: none
       font-size: 1rem
       &:hover
@@ -177,6 +196,12 @@ main
 
 
 
+.activeSection
+  background-color: #E3EFFB
+  p
+    font-weight: bold
+  label
+    font-weight: bold
 
 
 
