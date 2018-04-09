@@ -413,7 +413,8 @@ main {
         display: flex;
         z-index: 2;
         padding-left: 10px;
-        padding-bottom: 5px; }
+        padding-bottom: 5px;
+        padding-right: 55px; }
       main .aside-block .aside-menu-sect {
         display: flex;
         padding: 5px 5px 5px 30px; }
@@ -471,6 +472,8 @@ main {
       padding-left: 68px;
       padding-top: 5px;
       padding-bottom: 5px; }
+    main .right-block .aside-menu-dep {
+      padding-right: 75px; }
 
 .footer {
   display: flex;
