@@ -355,17 +355,17 @@ input:checked + .slider:before {
   border-radius: 50%; }
 
 .scroll {
-  overflow: auto;
+  overflow: scroll;
   float: left; }
 
 .scroll1::-webkit-scrollbar {
   width: 5px; }
 
 .scroll1::-webkit-scrollbar-track {
-  background: #ddd; }
+  background: #F5F6FA; }
 
 .scroll1::-webkit-scrollbar-thumb {
-  background: #666; }
+  background: #CCD0D3; }
 
 .scroll2::-webkit-scrollbar {
   width: 5px; }
@@ -386,8 +386,7 @@ main {
   position: relative; }
   main .aside-block {
     padding: 70px 0px 50px 0px;
-    overflow-x: hidden;
-    min-width: 225px; }
+    overflow-x: hidden; }
     main .aside-block i {
       margin-right: -25px;
       z-index: 1; }
@@ -404,19 +403,22 @@ main {
       z-index: 1;
       background-color: white;
       position: fixed; }
+    main .aside-block .form-check {
+      margin-right: 10px; }
     main .aside-block .aside-menu {
-      margin-top: 20px; }
+      margin-top: 20px;
+      color: #37373D; }
       main .aside-block .aside-menu-dep {
         margin-top: 1rem;
         display: flex;
         z-index: 2;
-        padding-left: 10px; }
+        padding-left: 10px;
+        padding-bottom: 5px; }
       main .aside-block .aside-menu-sect {
         display: flex;
-        padding: 10px 5px 0px 30px; }
+        padding: 5px 5px 5px 30px; }
         main .aside-block .aside-menu-sect summary {
-          display: flex;
-          margin-bottom: 5px; }
+          display: flex; }
         main .aside-block .aside-menu-sect p {
           margin-left: 2.3rem;
           line-height: 1.3rem;
@@ -426,6 +428,8 @@ main {
     left: 0;
     height: var(--leftBlockHeight);
     background-color: #fff; }
+    main .left-block form {
+      margin-left: 10px; }
   main .left-block-child {
     height: var(--centralBlockChildHeight);
     padding-right: var(--centralBlockLeftPadding); }
@@ -438,9 +442,7 @@ main {
     padding-top: 10px;
     padding-bottom: 100px;
     background-color: #F5F6FA;
-    height: var(--centralBlockHeight);
-    border-left: 1px solid rgba(48, 64, 80, 0.2);
-    border-right: 1px solid rgba(48, 64, 80, 0.2); }
+    height: var(--centralBlockHeight); }
     main .central-block .card {
       width: 15rem;
       margin: 110px 10px -70px; }
@@ -468,8 +470,6 @@ main {
     main .right-block .form-check-right {
       padding-left: 68px;
       padding-top: 5px;
-      padding-bottom: 5px; }
-    main .right-block .aside-menu-dep {
       padding-bottom: 5px; }
 
 .footer {
@@ -539,10 +539,7 @@ main {
       max-height: var(--max-height); }
 
 .activeSection {
-  background-color: #E3EFFB; }
-  .activeSection p {
-    font-weight: bold; }
-  .activeSection label {
-    font-weight: bold; }
+  background-color: #E3EFFB;
+  font-weight: bold; }
 
 /*# sourceMappingURL=main.css.map */

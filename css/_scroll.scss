@@ -1,5 +1,5 @@
 .scroll {
-  overflow: auto;
+  overflow: scroll;
   float: left;
 }
 
@@ -9,11 +9,14 @@
 }
 
 .scroll1::-webkit-scrollbar-track {
-  background: #ddd;
+  //background: #ddd;
+  background: #F5F6FA;
 }
 
 .scroll1::-webkit-scrollbar-thumb {
-  background: #666;
+  //background: #666;
+  //background: #6c757d;
+  background: #CCD0D3;
 }
 
 .scroll2::-webkit-scrollbar {
