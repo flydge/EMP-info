@@ -5,10 +5,12 @@ let rightBlock = document.querySelector('.right-block');
 let centralBlock = document.querySelector('.central-block');
 let centralBlockChild = document.querySelector('.central-block-child');
 let leftBlockChild = document.querySelector('.left-block-child');
+let rightBlockWhitLine = document.querySelector('.right-block-whiteLine');
 leftBlock.style.setProperty('--leftBlockHeight', (clientHeight-47) + 'px');
 rightBlock.style.setProperty('--rightBlockHeight', (clientHeight-47) + 'px');
 centralBlock.style.setProperty('--centralBlockHeight', (clientHeight-47) + 'px');
 centralBlockChild.style.setProperty('--centralBlockChildHeight', (clientHeight-47) + 'px');
+rightBlockWhitLine.style.setProperty('--rightBlockWhiteLine', (clientHeight) + 'px');
 
 
 
@@ -19,6 +21,10 @@ let cardsFoundBlock = document.querySelector('.cardsFound');
 let centralBlockWidth = centralBlock.clientWidth;
 let leftBlockWidth = leftBlock.clientWidth + 5;
 let rightBlockWidth = rightBlock.clientWidth + 5;
+
+/*if($.browser.mozilla) {
+    rightBlockWidth += 15;
+}*/
 
 console.log('centralBlock',centralBlockWidth);
 console.log('leftBlock',leftBlockWidth);
@@ -42,10 +48,12 @@ new ResizeSensor(jQuery('.left-block'), function(){
     let centralBlockWidth = centralBlock.clientWidth;
     let leftBlockWidth = leftBlock.clientWidth + 5;
     let rightBlockWidth = rightBlock.clientWidth + 5 ;
+
     let cardsFoundPercent = (clientWidth - (leftBlockWidth + rightBlockWidth + 50));
     leftBlockChild.style.setProperty('--centralBlockLeftPadding',leftBlockWidth + 'px');
     centralBlockChild.style.setProperty('--centralBlockRightPadding',rightBlockWidth + 'px');
     cardsFoundBlock.style.setProperty('--cardsFoundWidth', cardsFoundPercent  + 'px' );
+
 
 
 });
@@ -55,6 +63,7 @@ new ResizeSensor(jQuery('.right-block'), function(){
     let centralBlockWidth = centralBlock.clientWidth;
     let leftBlockWidth = leftBlock.clientWidth + 5;
     let rightBlockWidth = rightBlock.clientWidth + 5  ;
+
     let cardsFoundPercent = (clientWidth - (leftBlockWidth + rightBlockWidth + 50));
 
     leftBlockChild.style.setProperty('--centralBlockLeftPadding',leftBlockWidth + 'px');

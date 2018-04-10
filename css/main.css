@@ -358,6 +358,37 @@ input:checked + .slider:before {
   overflow: scroll;
   float: left; }
 
+/*@-moz-document url-prefix(http://),url-prefix(https://){
+  form{
+    margin-left: 20px;
+  }
+  .form-check-right{
+    padding-left: 78px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .aside-menu-dep{
+    padding-left: 20px;
+  }
+}*/
+@-moz-document url-prefix() {
+  scrollbar {
+    -moz-appearance: none !important;
+    background: lime !important; }
+
+  thumb, scrollbarbutton {
+    -moz-appearance: none !important;
+    background-color: blue !important; }
+
+  thumb:hover, scrollbarbutton:hover {
+    -moz-appearance: none !important;
+    background-color: red !important; }
+
+  scrollbarbutton {
+    display: none !important; }
+
+  scrollbar[orient="vertical"] {
+    min-width: 15px !important; } }
 .scroll1::-webkit-scrollbar {
   width: 5px; }
 
@@ -411,7 +442,7 @@ main {
       main .aside-block .aside-menu-dep {
         margin-top: 1rem;
         display: flex;
-        z-index: 2;
+        z-index: 6;
         padding-left: 10px;
         padding-bottom: 5px;
         padding-right: 55px; }
@@ -430,7 +461,7 @@ main {
     height: var(--leftBlockHeight);
     background-color: #fff; }
     main .left-block form {
-      margin-left: 10px; }
+      padding-left: 10px; }
   main .left-block-child {
     height: var(--centralBlockChildHeight);
     padding-right: var(--centralBlockLeftPadding); }
@@ -467,14 +498,21 @@ main {
     right: 0;
     background-color: #fff; }
     main .right-block form {
-      margin-left: 10px; }
+      padding-left: 10px; }
     main .right-block .form-check-right {
       padding-left: 68px;
       padding-top: 5px;
       padding-bottom: 5px; }
     main .right-block .aside-menu-dep {
       padding-right: 75px; }
-
+@-moz-document url-prefix() {
+  main .right-block .right-block-whiteLine {
+    position: fixed;
+    margin-top: -70px;
+    right: 5px;
+    width: 12px;
+    height: var(--rightBlockWhiteLine);
+    background-color: #fff; } }
 .footer {
   display: flex;
   flex-wrap: wrap;
@@ -544,5 +582,22 @@ main {
 .activeSection {
   background-color: #E3EFFB;
   font-weight: bold; }
+
+@-moz-document url-prefix() {
+  main {
+    overflow-y: auto; }
+
+  form {
+    padding-left: 8px; }
+
+  .aside-menu-dep {
+    margin-left: 15px;
+    margin-right: -15px; }
+
+  .left-block {
+    margin-right: 8px; }
+
+  .right-block {
+    z-index: 8; } }
 
 /*# sourceMappingURL=main.css.map */

@@ -46,7 +46,7 @@ main
       &-dep
         margin-top: 1rem
         display: flex
-        z-index: 2
+        z-index: 6
         padding-left: 10px
         padding-bottom: 5px
         padding-right: 55px
@@ -68,7 +68,7 @@ main
     height: var(--leftBlockHeight)
     background-color: #fff
     form
-      margin-left: 10px
+      padding-left: 10px
   .left-block-child
     height: var(--centralBlockChildHeight)
     padding-right: var(--centralBlockLeftPadding)
@@ -110,13 +110,21 @@ main
     right: 0
     background-color: #fff
     form
-      margin-left: 10px
+      padding-left: 10px
     .form-check-right
       padding-left: 68px
       padding-top: 5px
       padding-bottom: 5px
     .aside-menu-dep
       padding-right: 75px
+    @-moz-document url-prefix()
+      .right-block-whiteLine
+        position: fixed
+        margin-top: -70px
+        right: 5px
+        width: 12px
+        height: var(--rightBlockWhiteLine)
+        background-color: #fff
 
 
 
@@ -203,5 +211,17 @@ main
 
 
 
+@-moz-document url-prefix()
+  main
+    overflow-y: auto
+  form
+    padding-left: 8px
+  .aside-menu-dep
+    margin-left: 15px
+    margin-right: -15px
+  .left-block
+    margin-right: 8px
+  .right-block
+    z-index: 8
 
 
