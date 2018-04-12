@@ -3,43 +3,6 @@
   float: left;
 }
 
-/*@-moz-document url-prefix(http://),url-prefix(https://){
-  form{
-    margin-left: 20px;
-  }
-  .form-check-right{
-    padding-left: 78px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
-  .aside-menu-dep{
-    padding-left: 20px;
-  }
-}*/
-
-@-moz-document url-prefix() {
-  scrollbar {
-    -moz-appearance: none !important;
-    background: rgb(0,255,0) !important;
-  }
-  thumb,scrollbarbutton {
-    -moz-appearance: none !important;
-    background-color: rgb(0,0,255) !important;
-  }
-
-  thumb:hover,scrollbarbutton:hover {
-    -moz-appearance: none !important;
-    background-color: rgb(255,0,0) !important;
-  }
-
-  scrollbarbutton {
-    display: none !important;
-  }
-
-  scrollbar[orient="vertical"] {
-    min-width: 15px !important;
-  }
-}
 
 .scroll1::-webkit-scrollbar {
   width: 5px
