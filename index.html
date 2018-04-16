@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap3/dist/css/bootstrap.css">
     <link rel="stylesheet" href="node_modules/jquery-ui-dist/jquery-ui.min.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/main.css">
@@ -14,67 +14,69 @@
 
 </head>
 <body>
-<header class="box-shadow fixed-top">
-    <div>
-        <ul class="accordion">
-            <li class="tabs tabs-hover " id="tab1"> <!--activeTab-->
-                <div class="social-links search-icon">
-                    <a href="/skill/byemployee">searchLink</a>
-                </div>
-                <div class="paragraph">
-                    <a href="~/skill/byemployee">
-                        <h1>Поиск по скиллам и сотрудникам</h1>
-                        <p>Механизм поиска сотрудников, технологий и навыков</p>
-                    </a>
-                </div>
-            </li>
-            <li class="tabs tabs-hover" id="tab2">
-                <div class="social-links skills-icon">
-                    <a href="~/skill/list">skillsLink</a>
-                </div>
-                <div class="paragraph ">
-                    <a href="~/skill/list">
-                        <h1>Управление скиллами</h1>
-                        <p>Обновление и редактирование навыков и технологий</p>
-                    </a>
-                </div>
-            </li>
-            <li class="tabs tabs-hover" id="tab3">
-                <div class="social-links administration-icon">
-                    <a href="~/admin/roles">administrationLink</a>
-                </div>
-                <div class="paragraph">
-                    <a href="~/admin/roles">
-                        <h1>Администрирование</h1>
-                        <p>Просмотр логов, ошибок, настройка доступа</p>
-                    </a>
-                </div>
-            </li>
-        </ul>
-    </div>
+<header>
+    <div class="box-shadow navbar-fixed-top header">
+        <div>
+            <ul class="accordion">
+                <li class="tabs tabs-hover " id="tab1"> <!--activeTab-->
+                    <div class="social-links search-icon">
+                        <a href="/skill/byemployee">searchLink</a>
+                    </div>
+                    <div class="paragraph">
+                        <a href="~/skill/byemployee">
+                            <h1>Поиск по скиллам и сотрудникам</h1>
+                            <p>Механизм поиска сотрудников, технологий и навыков</p>
+                        </a>
+                    </div>
+                </li>
+                <li class="tabs tabs-hover" id="tab2">
+                    <div class="social-links skills-icon">
+                        <a href="~/skill/list">skillsLink</a>
+                    </div>
+                    <div class="paragraph ">
+                        <a href="~/skill/list">
+                            <h1>Управление скиллами</h1>
+                            <p>Обновление и редактирование навыков и технологий</p>
+                        </a>
+                    </div>
+                </li>
+                <li class="tabs tabs-hover" id="tab3">
+                    <div class="social-links administration-icon">
+                        <a href="~/admin/roles">administrationLink</a>
+                    </div>
+                    <div class="paragraph">
+                        <a href="~/admin/roles">
+                            <h1>Администрирование</h1>
+                            <p>Просмотр логов, ошибок, настройка доступа</p>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
 
-    <div class="d-flex justify-content-between userContext align-items-center">
-
-        <p class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-        >Петров Иван Сергеевич</p>
-
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <a class="dropdown-item" href="#"><i class="icon-mail"></i>Связь с администратором</a>
-            <a class="dropdown-item" href="#"><i class="icon-logout"></i>Выход из приложения</a>
+        <div class=" userContext">
+            <div class="dropdown">
+                <p class=" dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    Петров Иван Сергеевич
+                    <span class="caret"></span>
+                </p>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a class="dropdown-item" href="#"><i class="icon-mail"></i>Связь с администратором</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="icon-logout"></i>Выход из приложения</a></li>
+                </ul>
+            </div>
         </div>
     </div>
-
 </header>
 
 <main>
-    <div class="">
-        <div class=" d-flex flex-nowrap">
+    <div>
+        <div class="main-div">
 
             <div  class="aside-block left-block resizableLeftMenu scroll scroll1">
                 <form class="form-inline">
                     <i class="icon-search"></i>
-                    <input class="form-control form-control-sm" type="search" placeholder="Поиск" aria-label="Search">
+                    <input class="form-control-static" type="search" placeholder="Поиск" aria-label="Search">
                 </form>
 
                 <div class="aside-menu">
@@ -266,44 +268,31 @@
             <!-- /.left-block-child -->
 
             <div class="central-block scroll scroll1">
-                    <div>
-                        <div class="cardsFound">
-                            <div class="">
-                                <span class="text-muted">Найдено 3 результата</span>
-                            </div>
-                            <div class="download-print">
-                                <div class="myEmpSwitch">
-                                    <label class="switch">
-                                        <input type="checkbox" id="myEmp" checked>
-                                        <span class="slider round"></span>
-                                    </label>
-                                    <label class="form-check-label" for="myEmp">
-                                        Только мои сотрудники
-                                    </label>
-                                </div>
-                                <div class="trigger">
-                                    <a href="#" class="icon-download"></a>
-                                    <div class="el"><p class="badge badge-secondary">Выгрузка</p></div>
-                                </div>
-                                <div class="trigger">
-                                    <a href="#" class="icon-print"></a>
-                                    <div class="el2"><p class="badge badge-secondary">Печать</p></div>
-                                </div>
-                            </div>
+                <div>
+                    <div class="cardsFound">
+                        <div class="">
+                            <span class="text-muted">Найдено 3 результата</span>
                         </div>
-                        <div class="card border-light box-shadow">
-                            <div class="card-body">
-                                <h5 class="card-title">Иванов Иван Иванович</h5>
-                                <h6 class="card-subtitle text-muted">1-e отделение</h6>
-                                <span class="badge box-shadow">Html5</span>
-                                <span class="badge box-shadow">Css3</span>
-                                <span class="badge box-shadow">Angular5</span>
-                                <span class="badge box-shadow">NodeJs</span>
-                                <span class="badge box-shadow">ES6</span>
+                        <div class="download-print">
+                            <div class="myEmpSwitch">
+                                <label class="switch">
+                                    <input type="checkbox" id="myEmp" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                                <label class="form-check-label" for="myEmp">
+                                    Только мои сотрудники
+                                </label>
+                            </div>
+                            <div class="trigger">
+                                <a href="#" class="icon-download"></a>
+                                <div class="el"><p class="badge badge-secondary">Выгрузка</p></div>
+                            </div>
+                            <div class="trigger">
+                                <a href="#" class="icon-print"></a>
+                                <div class="el2"><p class="badge badge-secondary">Печать</p></div>
                             </div>
                         </div>
                     </div>
-
                     <div class="card border-light box-shadow">
                         <div class="card-body">
                             <h5 class="card-title">Иванов Иван Иванович</h5>
@@ -315,100 +304,113 @@
                             <span class="badge box-shadow">ES6</span>
                         </div>
                     </div>
-                    <div class="card border-light box-shadow">
-                        <div class="card-body">
-                            <h5 class="card-title">Иванов Иван Иванович</h5>
-                            <h6 class="card-subtitle text-muted">1-e отделение</h6>
-                            <span class="badge box-shadow">Html5</span>
-                            <span class="badge box-shadow">Css3</span>
-                            <span class="badge box-shadow">Angular5</span>
-                            <span class="badge box-shadow">ES6</span>
-                        </div>
-                    </div>
-                    <div class="card border-light box-shadow">
-                        <div class="card-body">
-                            <h5 class="card-title">Иванов Иван Иванович</h5>
-                            <h6 class="card-subtitle text-muted">1-e отделение</h6>
-                            <span class="badge box-shadow">Html5</span>
-                            <span class="badge box-shadow">Css3</span>
-                            <span class="badge box-shadow">Angular5</span>
-
-                        </div>
-                    </div>
-                    <div class="card border-light box-shadow">
-                        <div class="card-body">
-                            <h5 class="card-title">Иванов Иван Иванович</h5>
-                            <h6 class="card-subtitle text-muted">1-e отделение</h6>
-                            <span class="badge box-shadow">Html5</span>
-                            <span class="badge box-shadow">Css3</span>
-                            <span class="badge box-shadow">NodeJs</span>
-                            <span class="badge box-shadow">ES6</span>
-                        </div>
-                    </div>
-                    <div class="card border-light box-shadow">
-                        <div class="card-body">
-                            <h5 class="card-title">Иванов Иван Иванович</h5>
-                            <h6 class="card-subtitle text-muted">1-e отделение</h6>
-                            <span class="badge box-shadow">Html5</span>
-                            <span class="badge box-shadow">Css3</span>
-                            <span class="badge box-shadow">NodeJs</span>
-                            <span class="badge box-shadow">ES6</span>
-                        </div>
-                    </div>
-
-                    <div class="card border-light box-shadow">
-                        <div class="card-body">
-                            <h5 class="card-title">Иванов Иван Иванович</h5>
-                            <h6 class="card-subtitle text-muted">1-e отделение</h6>
-                            <span class="badge box-shadow">Html5</span>
-                            <span class="badge box-shadow">Css3</span>
-                            <span class="badge box-shadow">Angular5</span>
-                            <span class="badge box-shadow">NodeJs</span>
-                            <span class="badge box-shadow">ES6</span>
-                        </div>
-                    </div>
-                    <div class="card border-light box-shadow">
-                        <div class="card-body">
-                            <h5 class="card-title">Иванов Иван Иванович</h5>
-                            <h6 class="card-subtitle text-muted">1-e отделение</h6>
-                            <span class="badge box-shadow">Html5</span>
-                            <span class="badge box-shadow">Css3</span>
-                            <span class="badge box-shadow">Angular5</span>
-                            <span class="badge box-shadow">ES6</span>
-                        </div>
-                    </div>
-                    <div class="card border-light box-shadow">
-                        <div class="card-body">
-                            <h5 class="card-title">Иванов Иван Иванович</h5>
-                            <h6 class="card-subtitle text-muted">1-e отделение</h6>
-                            <span class="badge  box-shadow">Html5</span>
-                            <span class="badge  box-shadow">Css3</span>
-                            <span class="badge  box-shadow">Angular5</span>
-
-                        </div>
-                    </div>
-                    <div class="card border-light box-shadow">
-                        <div class="card-body">
-                            <h5 class="card-title">Иванов Иван Иванович</h5>
-                            <h6 class="card-subtitle text-muted">1-e отделение</h6>
-                            <span class="badge box-shadow">Html5</span>
-                            <span class="badge box-shadow">Css3</span>
-                            <span class="badge box-shadow">NodeJs</span>
-                            <span class="badge box-shadow">ES6</span>
-                        </div>
-                    </div>
-                    <div class="card border-light box-shadow">
-                        <div class="card-body">
-                            <h5 class="card-title">Иванов Иван Иванович</h5>
-                            <h6 class="card-subtitle text-muted">1-e отделение</h6>
-                            <span class="badge box-shadow">Html5</span>
-                            <span class="badge box-shadow">Css3</span>
-                            <span class="badge box-shadow">NodeJs</span>
-                            <span class="badge box-shadow">ES6</span>
-                        </div>
-                    </div>
-
                 </div>
+
+                <div class="card border-light box-shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">Иванов Иван Иванович</h5>
+                        <h6 class="card-subtitle text-muted">1-e отделение</h6>
+                        <span class="badge box-shadow">Html5</span>
+                        <span class="badge box-shadow">Css3</span>
+                        <span class="badge box-shadow">Angular5</span>
+                        <span class="badge box-shadow">NodeJs</span>
+                        <span class="badge box-shadow">ES6</span>
+                    </div>
+                </div>
+                <div class="card border-light box-shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">Иванов Иван Иванович</h5>
+                        <h6 class="card-subtitle text-muted">1-e отделение</h6>
+                        <span class="badge box-shadow">Html5</span>
+                        <span class="badge box-shadow">Css3</span>
+                        <span class="badge box-shadow">Angular5</span>
+                        <span class="badge box-shadow">ES6</span>
+                    </div>
+                </div>
+                <div class="card border-light box-shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">Иванов Иван Иванович</h5>
+                        <h6 class="card-subtitle text-muted">1-e отделение</h6>
+                        <span class="badge box-shadow">Html5</span>
+                        <span class="badge box-shadow">Css3</span>
+                        <span class="badge box-shadow">Angular5</span>
+
+                    </div>
+                </div>
+                <div class="card border-light box-shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">Иванов Иван Иванович</h5>
+                        <h6 class="card-subtitle text-muted">1-e отделение</h6>
+                        <span class="badge box-shadow">Html5</span>
+                        <span class="badge box-shadow">Css3</span>
+                        <span class="badge box-shadow">NodeJs</span>
+                        <span class="badge box-shadow">ES6</span>
+                    </div>
+                </div>
+                <div class="card border-light box-shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">Иванов Иван Иванович</h5>
+                        <h6 class="card-subtitle text-muted">1-e отделение</h6>
+                        <span class="badge box-shadow">Html5</span>
+                        <span class="badge box-shadow">Css3</span>
+                        <span class="badge box-shadow">NodeJs</span>
+                        <span class="badge box-shadow">ES6</span>
+                    </div>
+                </div>
+
+                <div class="card border-light box-shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">Иванов Иван Иванович</h5>
+                        <h6 class="card-subtitle text-muted">1-e отделение</h6>
+                        <span class="badge box-shadow">Html5</span>
+                        <span class="badge box-shadow">Css3</span>
+                        <span class="badge box-shadow">Angular5</span>
+                        <span class="badge box-shadow">NodeJs</span>
+                        <span class="badge box-shadow">ES6</span>
+                    </div>
+                </div>
+                <div class="card border-light box-shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">Иванов Иван Иванович</h5>
+                        <h6 class="card-subtitle text-muted">1-e отделение</h6>
+                        <span class="badge box-shadow">Html5</span>
+                        <span class="badge box-shadow">Css3</span>
+                        <span class="badge box-shadow">Angular5</span>
+                        <span class="badge box-shadow">ES6</span>
+                    </div>
+                </div>
+                <div class="card border-light box-shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">Иванов Иван Иванович</h5>
+                        <h6 class="card-subtitle text-muted">1-e отделение</h6>
+                        <span class="badge  box-shadow">Html5</span>
+                        <span class="badge  box-shadow">Css3</span>
+                        <span class="badge  box-shadow">Angular5</span>
+
+                    </div>
+                </div>
+                <div class="card border-light box-shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">Иванов Иван Иванович</h5>
+                        <h6 class="card-subtitle text-muted">1-e отделение</h6>
+                        <span class="badge box-shadow">Html5</span>
+                        <span class="badge box-shadow">Css3</span>
+                        <span class="badge box-shadow">NodeJs</span>
+                        <span class="badge box-shadow">ES6</span>
+                    </div>
+                </div>
+                <div class="card border-light box-shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">Иванов Иван Иванович</h5>
+                        <h6 class="card-subtitle text-muted">1-e отделение</h6>
+                        <span class="badge box-shadow">Html5</span>
+                        <span class="badge box-shadow">Css3</span>
+                        <span class="badge box-shadow">NodeJs</span>
+                        <span class="badge box-shadow">ES6</span>
+                    </div>
+                </div>
+
+            </div>
             <!-- /. central-block" -->
             <div class="central-block-child"></div>
             <!-- /. central-block-child" -->
@@ -417,251 +419,226 @@
                 <div class="right-block-whiteLine"></div>
                 <form class="form-inline">
                     <i class="icon-search"></i>
-                    <input class="form-control form-control-sm" type="search" placeholder="Поиск" aria-label="Search">
+                    <input class="form-control-static" type="search" placeholder="Поиск" aria-label="Search">
                     <!--<button class="btn btn-sm btn-info icon-search" type="submit"></button>-->
                 </form>
-                <details open>
-                    <summary class="aside-menu-dep">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="asideMenuId2">
-                            <!--<label class="form-check-label" for="asideMenuId2">
-                                Web design
-                            </label>-->
-                            Web design1
-                        </div>
-                    </summary>
-                    <div class="form-check">
-                        <details open>
-                            <summary class="aside-menu-dep mt-1 ">
+
+                <div class="aside-menu">
+                    <details>
+                        <summary class="aside-menu-dep">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" >
+                                1-е отделение
+                            </div>
+                        </summary>
+                        <details  class="aside-menu-sect">
+                            <summary >
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="asideMenuId2">
-                                    <!--<label class="form-check-label" for="asideMenuId2">
-                                        Web design
-                                    </label>-->
-                                    Web design2
+                                    <input class="form-check-input" type="checkbox" value="">
+                                    Отдел QWE
                                 </div>
                             </summary>
-                            <div class="form-check">
-                                <details>
-                                    <summary class="aside-menu-dep mt-1">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="asideMenuId2">
-                                            <!--<label class="form-check-label" for="asideMenuId2">
-                                                Web design
-                                            </label>-->
-                                            Web design2
-                                        </div>
-                                    </summary>
-                                    <div class="form-check aside-menu-sect form-check-right">
-                                        <input class="form-check-input  " type="checkbox" value="" id="asideMenuId3">
-                                        Angular
+                            <details  class="aside-menu-sect">
+                                <summary >
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="">
+                                        Отдел QWE
                                     </div>
-                                    <div class="form-check aside-menu-sect form-check-right">
-                                        <input class="form-check-input  " type="checkbox" value="" id="asideMenuId3">
-                                        Css
+                                </summary>
+                                <p>Иванов Иван Иванович</p>
+                                <p>Иванов Иван Иванович</p>
+                                <p>Иванов Иван Иванович</p>
+                            </details>
+                            <details  class="aside-menu-sect">
+                                <summary >
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="">
+                                        Отдел QWE
                                     </div>
-                                    <div class="form-check aside-menu-sect form-check-right">
-                                        <input class="form-check-input  " type="checkbox" value="" id="asideMenuId3">
-                                        Html
+                                </summary>
+                                <p>Иванов Иван Иванович</p>
+                                <p>Иванов Иван Иванович</p>
+                                <p>Иванов Иван Иванович</p>
+                            </details>
+                            <details  class="aside-menu-sect">
+                                <summary >
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="">
+                                        Отдел QWE
                                     </div>
-
-                                </details>
-                            </div>
-                            <div class="form-check">
-                                <details>
-                                    <summary class="aside-menu-dep mt-1">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="asideMenuId2">
-                                            <!--<label class="form-check-label" for="asideMenuId2">
-                                                Web design
-                                            </label>-->
-                                            Web design2
-                                        </div>
-                                    </summary>
-                                    <div class="form-check aside-menu-sect form-check-right">
-                                        <input class="form-check-input  " type="checkbox" value="" id="asideMenuId3">
-                                        Angular
-                                    </div>
-                                    <div class="form-check aside-menu-sect form-check-right">
-                                        <input class="form-check-input  " type="checkbox" value="" id="asideMenuId3">
-                                        Css
-                                    </div>
-                                    <div class="form-check aside-menu-sect form-check-right">
-                                        <input class="form-check-input  " type="checkbox" value="" id="asideMenuId3">
-                                        Html
-                                    </div>
-
-                                </details>
-                            </div>
-                            <div class="form-check">
-                                <details>
-                                    <summary class="aside-menu-dep mt-1">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="asideMenuId2">
-                                            <!--<label class="form-check-label" for="asideMenuId2">
-                                                Web design
-                                            </label>-->
-                                            Web design2
-                                        </div>
-                                    </summary>
-                                    <div class="form-check aside-menu-sect form-check-right">
-                                        <input class="form-check-input  " type="checkbox" value="" id="asideMenuId3">
-                                        Angular
-                                    </div>
-                                    <div class="form-check aside-menu-sect form-check-right">
-                                        <input class="form-check-input  " type="checkbox" value="" id="asideMenuId3">
-                                        Css
-                                    </div>
-                                    <div class="form-check aside-menu-sect form-check-right">
-                                        <input class="form-check-input  " type="checkbox" value="" id="asideMenuId3">
-                                        Html
-                                    </div>
-
-                                </details>
-                            </div>
-
+                                </summary>
+                                <p>Иванов Иван Иванович</p>
+                                <p>Иванов Иван Иванович</p>
+                                <p>Иванов Иван Иванович</p>
+                            </details>
                         </details>
-                    </div>
+                        <details  class="aside-menu-sect">
+                            <summary >
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="">
+                                    Отдел ZXC
+                                </div>
+                            </summary>
+                            <p>Иванов Иван Иванович</p>
+                            <p>Иванов Иван Иванович</p>
+                            <p>Иванов Иван Иванович</p>
+                        </details>
+                        <details  class="aside-menu-sect">
+                            <summary >
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="">
+                                    Отдел ASD
+                                </div>
+                            </summary>
+                            <p>Иванов Иван Иванович</p>
+                            <p>Иванов Иван Иванович</p>
+                            <p>Иванов Иван Иванович</p>
+                        </details>
+                    </details>
+                    <!-- /.department -->
+                    <details>
+                        <summary class="aside-menu-dep">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="1depId">
+                                <!--<label class="form-check-label" for="1depId">
+                                    1-е отделение
+                                </label>-->
+                                1-е отделение
+                            </div>
+                        </summary>
+                        <details  class="aside-menu-sect">
+                            <summary >
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="qweSectId">
+                                    Отдел QWE
+                                </div>
+                            </summary>
+                            <p>Иванов Иван Иванович</p>
+                            <p>Иванов Иван Иванович</p>
+                            <p>Иванов Иван Иванович</p>
+                        </details>
+                        <details  class="aside-menu-sect">
+                            <summary >
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="zxcSectId">
+                                    Отдел ZXC
+                                </div>
+                            </summary>
+                            <p>Иванов Иван Иванович</p>
+                            <p>Иванов Иван Иванович</p>
+                            <p>Иванов Иван Иванович</p>
+                        </details>
+                        <details  class="aside-menu-sect">
+                            <summary >
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="asdSectId">
+                                    Отдел ASD
+                                </div>
+                            </summary>
+                            <p>Иванов Иван Иванович</p>
+                            <p>Иванов Иван Иванович</p>
+                            <p>Иванов Иван Иванович</p>
+                        </details>
+                    </details>
+                    <!-- /.department -->
+                    <details>
+                        <summary class="aside-menu-dep">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="1depId">
+                                <!--<label class="form-check-label" for="1depId">
+                                    1-е отделение
+                                </label>-->
+                                1-е отделение
+                            </div>
+                        </summary>
+                        <details  class="aside-menu-sect">
+                            <summary >
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="qweSectId">
+                                    Отдел QWE
+                                </div>
+                            </summary>
+                            <p>Иванов Иван Иванович</p>
+                            <p>Иванов Иван Иванович</p>
+                            <p>Иванов Иван Иванович</p>
+                        </details>
+                        <details  class="aside-menu-sect">
+                            <summary >
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="zxcSectId">
+                                    Отдел ZXC
+                                </div>
+                            </summary>
+                            <p>Иванов Иван Иванович</p>
+                            <p>Иванов Иван Иванович</p>
+                            <p>Иванов Иван Иванович</p>
+                        </details>
+                        <details  class="aside-menu-sect">
+                            <summary >
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="asdSectId">
+                                    Отдел ASD
+                                </div>
+                            </summary>
+                            <p>Иванов Иван Иванович</p>
+                            <p>Иванов Иван Иванович</p>
+                            <p>Иванов Иван Иванович</p>
+                        </details>
+                    </details>
+                    <!-- /.department -->
+                    <details>
+                        <summary class="aside-menu-dep">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="1depId">
+                                <!--<label class="form-check-label" for="1depId">
+                                    1-е отделение
+                                </label>-->
+                                1-е отделение
+                            </div>
+                        </summary>
+                        <details  class="aside-menu-sect">
+                            <summary >
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="qweSectId">
+                                    Отдел QWE
+                                </div>
+                            </summary>
+                            <p>Иванов Иван Иванович</p>
+                            <p>Иванов Иван Иванович</p>
+                            <p>Иванов Иван Иванович</p>
+                        </details>
+                        <details  class="aside-menu-sect">
+                            <summary >
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="zxcSectId">
+                                    Отдел ZXC
+                                </div>
+                            </summary>
+                            <p>Иванов Иван Иванович</p>
+                            <p>Иванов Иван Иванович</p>
+                            <p>Иванов Иван Иванович</p>
+                        </details>
+                        <details  class="aside-menu-sect">
+                            <summary >
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="asdSectId">
+                                    Отдел ASD
+                                </div>
+                            </summary>
+                            <p>Иванов Иван Иванович</p>
+                            <p>Иванов Иван Иванович</p>
+                            <p>Иванов Иван Иванович</p>
+                        </details>
+                    </details>
+                    <!-- /.department -->
+                </div>
 
-
-                </details>
-                <!-- /details -->
-                <details open>
-                    <summary class="aside-menu-dep">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="asideMenuId2">
-                            <!--<label class="form-check-label" for="asideMenuId2">
-                                Web design
-                            </label>-->
-                            Web design
-                        </div>
-                    </summary>
-                    <div class="form-check aside-menu-sect form-check-right">
-                        <input class="form-check-input  " type="checkbox" value="" id="asideMenuId3">
-                        Angular
-                    </div>
-                    <div class="form-check aside-menu-sect form-check-right">
-                        <input class="form-check-input  " type="checkbox" value="" id="asideMenuId3">
-                        Css
-                    </div>
-                    <div class="form-check aside-menu-sect form-check-right">
-                        <input class="form-check-input  " type="checkbox" value="" id="asideMenuId3">
-                        Html
-                    </div>
-                </details>
-                <!-- /details -->
-                <details open>
-                    <summary class="aside-menu-dep">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="asideMenuId2">
-                            <!--<label class="form-check-label" for="asideMenuId2">
-                                Web design
-                            </label>-->
-                            Web design
-                        </div>
-                    </summary>
-                    <div class="form-check aside-menu-sect form-check-right">
-                        <input class="form-check-input  " type="checkbox" value="" id="asideMenuId3">
-                        Angular
-                    </div>
-                    <div class="form-check aside-menu-sect form-check-right">
-                        <input class="form-check-input  " type="checkbox" value="" id="asideMenuId3">
-                        Css
-                    </div>
-                    <div class="form-check aside-menu-sect form-check-right">
-                        <input class="form-check-input  " type="checkbox" value="" id="asideMenuId3">
-                        Html
-                    </div>
-                </details>
-                <!-- /details -->
-                <details open>
-                    <summary class="aside-menu-dep">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="asideMenuId2">
-                            <!--<label class="form-check-label" for="asideMenuId2">
-                                Web design
-                            </label>-->
-                            Web design
-                        </div>
-                    </summary>
-                    <div class="form-check aside-menu-sect form-check-right">
-                        <input class="form-check-input  " type="checkbox" value="" id="asideMenuId3">
-                        Angular
-                    </div>
-                    <div class="form-check aside-menu-sect form-check-right">
-                        <input class="form-check-input  " type="checkbox" value="" id="asideMenuId3">
-                        Css
-                    </div>
-                    <div class="form-check aside-menu-sect form-check-right">
-                        <input class="form-check-input  " type="checkbox" value="" id="asideMenuId3">
-                        Html
-                    </div>
-                </details>
-                <!-- /details -->
-                <details open>
-                    <summary class="aside-menu-dep">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="asideMenuId2">
-                            <!--<label class="form-check-label" for="asideMenuId2">
-                                Web design
-                            </label>-->
-                            Web design
-                        </div>
-                    </summary>
-                    <div class="form-check aside-menu-sect form-check-right">
-                        <input class="form-check-input  " type="checkbox" value="" id="asideMenuId3">
-                        Angular
-                    </div>
-                    <div class="form-check aside-menu-sect form-check-right">
-                        <input class="form-check-input  " type="checkbox" value="" id="asideMenuId3">
-                        Css
-                    </div>
-                    <div class="form-check aside-menu-sect form-check-right">
-                        <input class="form-check-input  " type="checkbox" value="" id="asideMenuId3">
-                        Html
-                    </div>
-                </details>
-                <!-- /details -->
-                <details>
-                    <summary class="aside-menu-dep">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="asideMenuId2">
-                            <!--<label class="form-check-label" for="asideMenuId2">
-                                Web design
-                            </label>-->
-                            Web design
-                        </div>
-                    </summary>
-                    <div class="form-check aside-menu-sect form-check-right">
-                        <input class="form-check-input  " type="checkbox" value="" id="asideMenuId3">
-                        Angular
-                    </div>
-                    <div class="form-check aside-menu-sect form-check-right">
-                        <input class="form-check-input  " type="checkbox" value="" id="asideMenuId3">
-                        Css
-                    </div>
-                    <div class="form-check aside-menu-sect form-check-right">
-                        <input class="form-check-input  " type="checkbox" value="" id="asideMenuId3">
-                        Html
-                    </div>
-                </details>
-                <!-- /details -->
             </div>
             <!-- /.aside-block  right-block -->
         </div>
     </div>
     <!-- /.content -->
 </main>
-
-<footer class="card-footer text-muted align-bottom">
-    <div class="container">
-        <p class="float-right">
-            <a href="#">Back to top</a>
-        </p>
-        <p>footer content</p>
-    </div>
-</footer>
-
 
 
 <script src="node_modules/css-element-queries/src/ResizeSensor.js"></script>
@@ -671,7 +648,7 @@
 <script src="js/hint.js"></script>
 <script src="js/asideScroll.js"></script>
 <script src="js/header.js"></script>
-<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="node_modules/bootstrap3/dist/js/bootstrap.min.js"></script>
 
 <script src="js/checkboxesMenuColor.js"></script>
 

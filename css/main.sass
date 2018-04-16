@@ -1,7 +1,7 @@
 @import "colors"
 @import "switch"
 @import "scroll"
-
+@import "card"
 
 .d-flex
   display: -webkit-box !important
@@ -12,62 +12,62 @@ body
   overflow: hidden
 
 main
-  margin-top: 60px
   position: relative
-  .aside-block
-    padding: 70px 0px 50px 0px
-    overflow-x: hidden
-    i
-      margin-right: -25px
-      z-index: 1
-    input
-      padding-left: 27px
-      margin-top: 0
-      border: none
-      border-bottom: 1px solid #304050
-      border-radius: 0
-    form
-      padding-top: 60px
-      margin-top: -80px
-      padding-right: 130px
-      z-index: 1
-      background-color: white
+  .main-div
+    display: flex
+    flex-wrap: nowrap
+    .aside-block
       position: fixed
-    .form-check
-      margin-right: 10px
-
-
-    .aside-menu
-      margin-top: 20px
-      color: #37373D
-      //color: #25262E
-
-      &-dep
-        margin-top: 1rem
-        display: flex
-        z-index: 6
+      padding: 75px 0px 50px 0px
+      overflow-x: hidden
+      background-color: #fff
+      input
+        padding-left: 27px
+        margin-top: 0
+        border: none
+        border-bottom: 1px solid #304050
+        border-radius: 0
+      form
+        padding-top: 60px
+        margin-top: -80px
+        padding-right: 130px
+        z-index: 1
+        background-color: white
+        position: fixed
         padding-left: 10px
-        padding-bottom: 5px
-        padding-right: 55px
-
-      &-sect
-        display: flex
-        padding: 5px 5px 5px 30px
-        summary
+        i
+          position: fixed
+          padding-top: 7px
+          margin-right: -25px
+          z-index: 2
+        input
+          width: 200px
+      .form-check
+        margin-right: 10px
+      .aside-menu
+        margin-top: 20px
+        color: #37373D
+        &-dep
+          margin-top: 1rem
           display: flex
-        p
-          margin-left: 2.3rem
-          line-height: 1.3rem
+          z-index: 6
+          padding-left: 10px
           padding-bottom: 5px
+          padding-right: 55px
+        &-sect
+          display: flex
+          padding: 5px 5px 5px 30px
+          summary
+            display: flex
+          p
+            margin-left: 2.3rem
+            line-height: 1.3rem
+            padding-bottom: 5px
 
 
   .left-block
-    position: fixed
     left: 0
     height: var(--leftBlockHeight)
-    background-color: #fff
-    form
-      padding-left: 10px
   .left-block-child
     height: var(--centralBlockChildHeight)
     padding-right: var(--centralBlockLeftPadding)
@@ -82,13 +82,14 @@ main
     padding-bottom: 100px
     background-color: $white
     height: var(--centralBlockHeight)
-    //border-left: 1px solid rgba(48, 64, 80, 0.2)
-    //border-right: 1px solid rgba(48, 64, 80, 0.2)
     .card
+      //padding: 10px
       width: 15rem
       margin: 110px 10px -70px
+      background-color: #fff
       h5
         font-size: 1.3rem
+        //margin-bottom: 10px
       h6
         margin-bottom: 10px
       .badge
@@ -104,12 +105,8 @@ main
 
 
   .right-block
-    position: fixed
     height: var(--rightBlockHeight)
     right: 0
-    background-color: #fff
-    form
-      padding-left: 10px
     .form-check-right
       padding-left: 68px
       padding-top: 5px
@@ -149,10 +146,6 @@ main
   margin-top: 45px
   font-size: 1.5rem
   width: 90%
-
-  //width: var(--cardsFoundWidth)
-
-
   .myEmpSwitch
     font-size: 1rem
     margin-top: 5px

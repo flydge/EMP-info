@@ -81,49 +81,27 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   vertical-align: baseline;
   font-family: Lato, sans-serif; }
 
-ol, ul {
-  list-style: none; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle; }
-
-q, blockquote {
-  quotes: none; }
-
-q:before, q:after {
-  content: "";
-  content: none; }
-
-blockquote:before, blockquote:after {
-  content: "";
-  content: none; }
-
 a img {
   border: none; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section {
   display: block; }
 
-body {
-  background: none;
-  font-family: Lato, sans-serif; }
-
 header {
+  margin-top: 60px; }
+
+.header {
   display: flex;
   justify-content: space-between;
   background: #17283A;
   width: 100%; }
-  header .userContext {
-    margin-right: 10px; }
-    header .userContext .dropdown-item i {
+  .header .userContext {
+    display: flex;
+    align-items: center;
+    margin-right: 45px; }
+    .header .userContext .dropdown-item i {
       margin-right: 5px; }
-    header .userContext p {
+    .header .userContext p {
       margin-left: 5px;
       color: white; }
 

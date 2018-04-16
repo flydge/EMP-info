@@ -66,6 +66,251 @@ input:checked + .slider:before {
 .scroll2::-webkit-scrollbar-thumb {
   background: #666; }
 
+.card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem; }
+
+/*
+.card > hr {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.card > .list-group:first-child .list-group-item:first-child {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.card > .list-group:last-child .list-group-item:last-child {
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}*/
+.card-body {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1.25rem; }
+
+.card-title {
+  margin-bottom: 0.75rem; }
+
+.card-subtitle {
+  margin-top: -0.375rem;
+  margin-bottom: 0; }
+
+/*
+.card-text:last-child {
+  margin-bottom: 0;
+}
+
+.card-link:hover {
+  text-decoration: none;
+}
+
+.card-link + .card-link {
+  margin-left: 1.25rem;
+}
+
+.card-header {
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}*/
+/*
+
+.card-header:first-child {
+  border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+}
+
+.card-header + .list-group .list-group-item:first-child {
+  border-top: 0;
+}
+
+.card-footer {
+  padding: 0.75rem 1.25rem;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.card-footer:last-child {
+  border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px);
+}
+
+.card-header-tabs {
+  margin-right: -0.625rem;
+  margin-bottom: -0.75rem;
+  margin-left: -0.625rem;
+  border-bottom: 0;
+}
+
+.card-header-pills {
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.card-img-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1.25rem;
+}
+
+.card-img {
+  width: 100%;
+  border-radius: calc(0.25rem - 1px);
+}
+
+.card-img-top {
+  width: 100%;
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.25rem - 1px);
+}
+
+.card-img-bottom {
+  width: 100%;
+  border-bottom-right-radius: calc(0.25rem - 1px);
+  border-bottom-left-radius: calc(0.25rem - 1px);
+}
+*/
+.card-deck {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.card-deck .card {
+  margin-bottom: 15px; }
+
+@media (min-width: 576px) {
+  .card-deck {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    margin-right: -15px;
+    margin-left: -15px; }
+
+  .card-deck .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 0%;
+    flex: 1 0 0%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-right: 15px;
+    margin-bottom: 0;
+    margin-left: 15px; } }
+.card-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.card-group > .card {
+  margin-bottom: 15px; }
+
+@media (min-width: 576px) {
+  .card-group {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap; }
+
+  .card-group > .card {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 0%;
+    flex: 1 0 0%;
+    margin-bottom: 0; }
+
+  .card-group > .card + .card {
+    margin-left: 0;
+    border-left: 0; }
+
+  .card-group > .card:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0; }
+
+  .card-group > .card:first-child .card-img-top,
+  .card-group > .card:first-child .card-header {
+    border-top-right-radius: 0; }
+
+  .card-group > .card:first-child .card-img-bottom,
+  .card-group > .card:first-child .card-footer {
+    border-bottom-right-radius: 0; }
+
+  .card-group > .card:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0; }
+
+  .card-group > .card:last-child .card-img-top,
+  .card-group > .card:last-child .card-header {
+    border-top-left-radius: 0; }
+
+  .card-group > .card:last-child .card-img-bottom,
+  .card-group > .card:last-child .card-footer {
+    border-bottom-left-radius: 0; }
+
+  .card-group > .card:only-child {
+    border-radius: 0.25rem; }
+
+  .card-group > .card:only-child .card-img-top,
+  .card-group > .card:only-child .card-header {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem; }
+
+  .card-group > .card:only-child .card-img-bottom,
+  .card-group > .card:only-child .card-footer {
+    border-bottom-right-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem; }
+
+  .card-group > .card:not(:first-child):not(:last-child):not(:only-child) {
+    border-radius: 0; }
+
+  .card-group > .card:not(:first-child):not(:last-child):not(:only-child) .card-img-top,
+  .card-group > .card:not(:first-child):not(:last-child):not(:only-child) .card-img-bottom,
+  .card-group > .card:not(:first-child):not(:last-child):not(:only-child) .card-header,
+  .card-group > .card:not(:first-child):not(:last-child):not(:only-child) .card-footer {
+    border-radius: 0; } }
+.card-columns .card {
+  margin-bottom: 0.75rem; }
+
+@media (min-width: 576px) {
+  .card-columns {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-gap: 1.25rem;
+    -moz-column-gap: 1.25rem;
+    column-gap: 1.25rem; }
+
+  .card-columns .card {
+    display: inline-block;
+    width: 100%; } }
 .d-flex {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
@@ -75,55 +320,60 @@ body {
   overflow: hidden; }
 
 main {
-  margin-top: 60px;
   position: relative; }
-  main .aside-block {
-    padding: 70px 0px 50px 0px;
-    overflow-x: hidden; }
-    main .aside-block i {
-      margin-right: -25px;
-      z-index: 1; }
-    main .aside-block input {
-      padding-left: 27px;
-      margin-top: 0;
-      border: none;
-      border-bottom: 1px solid #304050;
-      border-radius: 0; }
-    main .aside-block form {
-      padding-top: 60px;
-      margin-top: -80px;
-      padding-right: 130px;
-      z-index: 1;
-      background-color: white;
-      position: fixed; }
-    main .aside-block .form-check {
-      margin-right: 10px; }
-    main .aside-block .aside-menu {
-      margin-top: 20px;
-      color: #37373D; }
-      main .aside-block .aside-menu-dep {
-        margin-top: 1rem;
-        display: flex;
-        z-index: 6;
-        padding-left: 10px;
-        padding-bottom: 5px;
-        padding-right: 55px; }
-      main .aside-block .aside-menu-sect {
-        display: flex;
-        padding: 5px 5px 5px 30px; }
-        main .aside-block .aside-menu-sect summary {
-          display: flex; }
-        main .aside-block .aside-menu-sect p {
-          margin-left: 2.3rem;
-          line-height: 1.3rem;
-          padding-bottom: 5px; }
+  main .main-div {
+    display: flex;
+    flex-wrap: nowrap; }
+    main .main-div .aside-block {
+      position: fixed;
+      padding: 75px 0px 50px 0px;
+      overflow-x: hidden;
+      background-color: #fff; }
+      main .main-div .aside-block input {
+        padding-left: 27px;
+        margin-top: 0;
+        border: none;
+        border-bottom: 1px solid #304050;
+        border-radius: 0; }
+      main .main-div .aside-block form {
+        padding-top: 60px;
+        margin-top: -80px;
+        padding-right: 130px;
+        z-index: 1;
+        background-color: white;
+        position: fixed;
+        padding-left: 10px; }
+        main .main-div .aside-block form i {
+          position: fixed;
+          padding-top: 7px;
+          margin-right: -25px;
+          z-index: 2; }
+        main .main-div .aside-block form input {
+          width: 200px; }
+      main .main-div .aside-block .form-check {
+        margin-right: 10px; }
+      main .main-div .aside-block .aside-menu {
+        margin-top: 20px;
+        color: #37373D; }
+        main .main-div .aside-block .aside-menu-dep {
+          margin-top: 1rem;
+          display: flex;
+          z-index: 6;
+          padding-left: 10px;
+          padding-bottom: 5px;
+          padding-right: 55px; }
+        main .main-div .aside-block .aside-menu-sect {
+          display: flex;
+          padding: 5px 5px 5px 30px; }
+          main .main-div .aside-block .aside-menu-sect summary {
+            display: flex; }
+          main .main-div .aside-block .aside-menu-sect p {
+            margin-left: 2.3rem;
+            line-height: 1.3rem;
+            padding-bottom: 5px; }
   main .left-block {
-    position: fixed;
     left: 0;
-    height: var(--leftBlockHeight);
-    background-color: #fff; }
-    main .left-block form {
-      padding-left: 10px; }
+    height: var(--leftBlockHeight); }
   main .left-block-child {
     height: var(--centralBlockChildHeight);
     padding-right: var(--centralBlockLeftPadding); }
@@ -139,7 +389,8 @@ main {
     height: var(--centralBlockHeight); }
     main .central-block .card {
       width: 15rem;
-      margin: 110px 10px -70px; }
+      margin: 110px 10px -70px;
+      background-color: #fff; }
       main .central-block .card h5 {
         font-size: 1.3rem; }
       main .central-block .card h6 {
@@ -155,12 +406,8 @@ main {
     height: var(--centralBlockChildHeight);
     padding-left: var(--centralBlockRightPadding); }
   main .right-block {
-    position: fixed;
     height: var(--rightBlockHeight);
-    right: 0;
-    background-color: #fff; }
-    main .right-block form {
-      padding-left: 10px; }
+    right: 0; }
     main .right-block .form-check-right {
       padding-left: 68px;
       padding-top: 5px;
